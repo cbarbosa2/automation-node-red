@@ -1,1 +1,5130 @@
-[]
+[
+    {
+        "id": "680b320c.dc02fc",
+        "type": "tab",
+        "label": "Estore Escritorio",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "69ca8618.c017c8",
+        "type": "tab",
+        "label": "Estore Sala",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "37e240e2.5761d",
+        "type": "tab",
+        "label": "Estore Cozinha",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "eaff0a8c.d1b918",
+        "type": "tab",
+        "label": "Estore Tomas",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "140810ca.ed9f1f",
+        "type": "tab",
+        "label": "Estore Camila",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "c5b1ec9d.6c958",
+        "type": "tab",
+        "label": "Estore Suite",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8d42f729da146ee0",
+        "type": "tab",
+        "label": "Wake up MQTT on Venus",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ca14a99745f37cb9",
+        "type": "tab",
+        "label": "Solar Forecast",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "75940931abc7f696",
+        "type": "tab",
+        "label": "OMIE",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8adff1fe.af95b",
+        "type": "tab",
+        "label": "Adjust SOC Limit & Charge Power",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f6d96fc8cb663d40",
+        "type": "tab",
+        "label": "Cerbo MQTT to Prometheus",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "eb5b7fcb6e88a670",
+        "type": "tab",
+        "label": "Car Plugs",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e4d087d6.b3e7c8",
+        "type": "tab",
+        "label": "Book Padel",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "8eb17c2f.ee95d",
+        "type": "tab",
+        "label": "Mining",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "7f1c5dd455b5d4d9",
+        "type": "subflow",
+        "name": "Calc plug current and start/stop",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "ec2048024955392f"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 340,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "ec2048024955392f",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 340,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "ec2048024955392f",
+                        "port": 1
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "cc498f3.4f5767",
+        "type": "mqtt-broker",
+        "name": "Local Mosquitto MQTT",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": 4,
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d8985576.3d6c78",
+        "type": "tls-config",
+        "name": "Fake SSL Cert",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false
+    },
+    {
+        "id": "d50d0c9f.31e858",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false
+    },
+    {
+        "id": "65f6ad10e3c3ffe6",
+        "type": "mqtt-broker",
+        "name": "Venus MQTT",
+        "broker": "192.168.68.119",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "1f7d1d77798cd21d",
+        "type": "prometheus-metric-config",
+        "name": "ess_battery_power",
+        "help": "Battery power (W)",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "4d588ab370788d43",
+        "type": "prometheus-metric-config",
+        "name": "ess_battery_current",
+        "help": "Battery current (A)",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "bd6fd22336fd2e38",
+        "type": "prometheus-metric-config",
+        "name": "ess_battery_voltage",
+        "help": "Battery voltage (V)",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "494e2406dd828843",
+        "type": "prometheus-metric-config",
+        "name": "ess_battery_temperature",
+        "help": "Battery temperature (C)",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "ea2e21dd9fca10bc",
+        "type": "prometheus-metric-config",
+        "name": "ess_battery_soc",
+        "help": "Battery SOC (%)",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "206c923c584b2cc9",
+        "type": "prometheus-metric-config",
+        "name": "ess_grid_power",
+        "help": "Grid power (W)",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "624e4d04727f66f5",
+        "type": "prometheus-metric-config",
+        "name": "ess_consumption_power",
+        "help": "Consumption power (W)",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "d52562f6991dbcc5",
+        "type": "prometheus-metric-config",
+        "name": "ess_battery_min_soc",
+        "help": "Battery Min Soc",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "3bed233a6e5cc969",
+        "type": "prometheus-metric-config",
+        "name": "ess_switch_i3",
+        "help": "i3 switch position",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "cdc76e63bec6b72e",
+        "type": "prometheus-metric-config",
+        "name": "ess_switch_kona",
+        "help": "Kona switch mode",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "b6136bbb0824bed0",
+        "type": "prometheus-metric-config",
+        "name": "ess_pv_inverter_power",
+        "help": "PV Inverter",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "f8fc697f3d1fe4b1",
+        "type": "prometheus-metric-config",
+        "name": "ess_pv_charger_power",
+        "help": "PV Charger Power",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "dc40be22f662956b",
+        "type": "prometheus-metric-config",
+        "name": "ess_battery_min_voltage",
+        "help": "Min cell voltage",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "b99049415402a22e",
+        "type": "prometheus-metric-config",
+        "name": "ess_battery_max_voltage",
+        "help": "Max cell voltage",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "7c47e5285c425ff3",
+        "type": "prometheus-metric-config",
+        "name": "ess_battery_min_cell_voltage",
+        "help": "Min cell voltage",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "5a6cce6768ed1944",
+        "type": "prometheus-metric-config",
+        "name": "ess_battery_max_cell_voltage",
+        "help": "Max cell voltage",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "ab94e04018c19305",
+        "type": "prometheus-metric-config",
+        "name": "ess_solar_forecast_today",
+        "help": "Solar forecast for today",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "03bab0a29ea5ef73",
+        "type": "prometheus-metric-config",
+        "name": "ess_solar_forecast_tomorrow",
+        "help": "Solar forecast for tomorrow",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "ad51451daaab657a",
+        "type": "prometheus-metric-config",
+        "name": "ess_solar_forecast",
+        "help": "Solar forecast for next days",
+        "labels": "day",
+        "mtype": "gauge"
+    },
+    {
+        "id": "d4f1c4823179a10f",
+        "type": "prometheus-metric-config",
+        "name": "ess_omie_price",
+        "help": "OMIE price",
+        "labels": "index, day, hour",
+        "mtype": "gauge"
+    },
+    {
+        "id": "0a2972b563cb7ab4",
+        "type": "prometheus-metric-config",
+        "name": "ess_charge_i3_power",
+        "help": "Charge i3 power",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "9b1812a9c25bd733",
+        "type": "prometheus-metric-config",
+        "name": "ess_charge_kona_power",
+        "help": "Charge Kona Power",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "b06a760a37f82250",
+        "type": "prometheus-metric-config",
+        "name": "ess_shed_temperature",
+        "help": "Shed temperature",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
+        "id": "20e3ad68df8c84ac",
+        "type": "config-vrm-api",
+        "name": "Home"
+    },
+    {
+        "id": "ec2048024955392f",
+        "type": "function",
+        "z": "7f1c5dd455b5d4d9",
+        "name": "calc",
+        "func": "const MODE_OFF = 1;\nconst MODE_SUN_ONLY = 2;\nconst MODE_ESS_ONLY = 3;\nconst MODE_NIGHT = 4;\nconst MODE_ON = 5;\nconst MODE_MANUAL = 6;\nconst TARGET_AMPS_MIN = 7;\nconst TARGET_AMPS_NORMAL = 12;\n\nconst mode = msg.payload.mode;\nconst chargingPower = msg.payload.chargingPower;\nconst chargerStatus = msg.payload.chargerStatus;\nconst soc = msg.payload.soc\nconst minSoc = msg.payload.minSoc;\nconst batteryPower = msg.payload.batteryPower;\nconst targetAmpsMax = msg.payload.maxAmps || 18;\nconst hours = new Date().getHours();\nconst evening = (hours < 8) || (hours >= 22);\n\nfunction powerToAmps(power) {\n    return Math.min(targetAmpsMax, Math.round(power / 240));\n}\n\nfunction calcAmpsWhenDayOnly() {\n    if (soc < minSoc + 5) {\n        return 0;\n    }\n    let targetBatteryCharge = 0;\n    if (soc > 95) {\n        targetBatteryCharge = -2000;\n    }\n    const targetPower = chargingPower + batteryPower - targetBatteryCharge;\n    return powerToAmps(targetPower);\n}\n\n// targetAmps < 7 -> turned off, 7..18 -> charges at this current\nfunction generateOutput(targetAmps, chargingAmps, chargerStatus) {\n    const result = [null, null];\n\n    if (targetAmps == undefined || targetAmps == chargingAmps) return result;\n\n    let newStartStop;\n    let newCurrent;\n\n    if (targetAmps < TARGET_AMPS_MIN) {\n        // turn off\n        if (chargingAmps > 0) {\n            // stop\n            newStartStop = 0;\n            // set min current\n            newCurrent = TARGET_AMPS_MIN;\n        }\n    } else {\n        // status: Connected, Waiting for start\n        if ((chargerStatus == 1 || chargerStatus == 6) && (targetAmps >= 8)) {\n            // start\n            newStartStop = 1;\n            newCurrent = TARGET_AMPS_NORMAL;\n        }\n\n        // adjust current\n        newCurrent = targetAmps;\n    }\n\n    if (newCurrent != undefined) {\n        result[0] = { payload: { value: newCurrent } };\n    }\n    if (newStartStop != undefined) {\n        result[1] = { payload: { value: newStartStop } };\n    }\n\n    return result;\n}\n\nlet targetAmps = undefined;\n\nif (mode >= MODE_OFF && mode <= MODE_ON) {\n    if (mode == MODE_OFF) {\n        targetAmps = 0;\n        // on\n    } else if (mode == MODE_ON) {\n        targetAmps = TARGET_AMPS_NORMAL;\n    } else {\n        if (!evening) {\n            targetAmps = calcAmpsWhenDayOnly();\n        } else {\n            if (mode == MODE_SUN_ONLY) {\n                targetAmps = 0;\n            } else if (mode == MODE_ESS_ONLY) {\n                const eveningSocMargin = 2 * ((24 + 8 - hours) % 24);                \n                if (soc > minSoc + eveningSocMargin) {\n                    targetAmps = TARGET_AMPS_NORMAL;\n                } else {\n                    targetAmps = 0;\n                }\n            }  else if (mode == MODE_NIGHT) {\n                targetAmps = TARGET_AMPS_NORMAL;\n            }\n        }\n    }\n}\n\nreturn generateOutput(targetAmps, powerToAmps(chargingPower), chargerStatus);",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "142f1bca.797cf4",
+        "type": "bigtimer",
+        "z": "680b320c.dc02fc",
+        "outtopic": "",
+        "outpayload1": "open",
+        "outpayload2": "close",
+        "name": "Open/Close",
+        "comment": "",
+        "lat": "41.1579",
+        "lon": "-8.6291",
+        "starttime": "5003",
+        "endtime": "5004",
+        "starttime2": 0,
+        "endtime2": 0,
+        "startoff": 0,
+        "endoff": 0,
+        "startoff2": 0,
+        "endoff2": 0,
+        "offs": 0,
+        "outtext1": "",
+        "outtext2": "",
+        "timeout": 1440,
+        "sun": true,
+        "mon": true,
+        "tue": true,
+        "wed": true,
+        "thu": true,
+        "fri": true,
+        "sat": true,
+        "jan": true,
+        "feb": true,
+        "mar": true,
+        "apr": true,
+        "may": true,
+        "jun": true,
+        "jul": true,
+        "aug": true,
+        "sep": true,
+        "oct": true,
+        "nov": true,
+        "dec": true,
+        "day1": 0,
+        "month1": 0,
+        "day2": 0,
+        "month2": 0,
+        "day3": 0,
+        "month3": 0,
+        "day4": 0,
+        "month4": 0,
+        "day5": 0,
+        "month5": 0,
+        "day6": 0,
+        "month6": 0,
+        "day7": 0,
+        "month7": 0,
+        "day8": 0,
+        "month8": 0,
+        "day9": 0,
+        "month9": 0,
+        "day10": 0,
+        "month10": 0,
+        "day11": 0,
+        "month11": 0,
+        "day12": 0,
+        "month12": 0,
+        "d1": 0,
+        "w1": 0,
+        "d2": 0,
+        "w2": 0,
+        "d3": 0,
+        "w3": 0,
+        "d4": 0,
+        "w4": 0,
+        "d5": 0,
+        "w5": 0,
+        "d6": 0,
+        "w6": 0,
+        "xday1": 0,
+        "xmonth1": 0,
+        "xday2": 0,
+        "xmonth2": 0,
+        "xday3": 0,
+        "xmonth3": 0,
+        "xday4": 0,
+        "xmonth4": 0,
+        "xday5": 0,
+        "xmonth5": 0,
+        "xday6": 0,
+        "xmonth6": 0,
+        "xday7": 0,
+        "xmonth7": 0,
+        "xday8": 0,
+        "xmonth8": 0,
+        "xday9": 0,
+        "xmonth9": 0,
+        "xday10": 0,
+        "xmonth10": 0,
+        "xday11": 0,
+        "xmonth11": 0,
+        "xday12": 0,
+        "xmonth12": 0,
+        "xd1": 0,
+        "xw1": 0,
+        "xd2": 0,
+        "xw2": 0,
+        "xd3": 0,
+        "xw3": 0,
+        "xd4": 0,
+        "xw4": 0,
+        "xd5": 0,
+        "xw5": 0,
+        "xd6": 0,
+        "xw6": 0,
+        "suspend": false,
+        "random": false,
+        "randon1": false,
+        "randoff1": false,
+        "randon2": false,
+        "randoff2": false,
+        "repeat": false,
+        "atstart": false,
+        "odd": false,
+        "even": false,
+        "x": 90,
+        "y": 80,
+        "wires": [
+            [
+                "66cb1fd1.a5992"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "cbf6dff7.122e",
+        "type": "inject",
+        "z": "680b320c.dc02fc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "close",
+        "payloadType": "str",
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "66cb1fd1.a5992"
+            ]
+        ]
+    },
+    {
+        "id": "c96fc84c.95ec78",
+        "type": "inject",
+        "z": "680b320c.dc02fc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "open",
+        "payloadType": "str",
+        "x": 110,
+        "y": 240,
+        "wires": [
+            [
+                "66cb1fd1.a5992"
+            ]
+        ]
+    },
+    {
+        "id": "4722a28c.3045ec",
+        "type": "inject",
+        "z": "680b320c.dc02fc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "stop",
+        "payloadType": "str",
+        "x": 110,
+        "y": 300,
+        "wires": [
+            [
+                "66cb1fd1.a5992"
+            ]
+        ]
+    },
+    {
+        "id": "66cb1fd1.a5992",
+        "type": "mqtt out",
+        "z": "680b320c.dc02fc",
+        "name": "",
+        "topic": "shellies/shellyswitch25-E8DB84AA450A/roller/0/command",
+        "qos": "1",
+        "retain": "",
+        "broker": "cc498f3.4f5767",
+        "x": 460,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "cd523952.de9ac8",
+        "type": "bigtimer",
+        "z": "69ca8618.c017c8",
+        "outtopic": "",
+        "outpayload1": "open",
+        "outpayload2": "close",
+        "name": "Open/Close",
+        "comment": "",
+        "lat": "41.1579",
+        "lon": "-8.6291",
+        "starttime": "5000",
+        "endtime": "5001",
+        "starttime2": 0,
+        "endtime2": 0,
+        "startoff": "1",
+        "endoff": "-1",
+        "startoff2": 0,
+        "endoff2": 0,
+        "offs": 0,
+        "outtext1": "",
+        "outtext2": "",
+        "timeout": 1440,
+        "sun": true,
+        "mon": true,
+        "tue": true,
+        "wed": true,
+        "thu": true,
+        "fri": true,
+        "sat": true,
+        "jan": true,
+        "feb": true,
+        "mar": true,
+        "apr": true,
+        "may": true,
+        "jun": true,
+        "jul": true,
+        "aug": true,
+        "sep": true,
+        "oct": true,
+        "nov": true,
+        "dec": true,
+        "day1": 0,
+        "month1": 0,
+        "day2": 0,
+        "month2": 0,
+        "day3": 0,
+        "month3": 0,
+        "day4": 0,
+        "month4": 0,
+        "day5": 0,
+        "month5": 0,
+        "day6": 0,
+        "month6": 0,
+        "day7": 0,
+        "month7": 0,
+        "day8": 0,
+        "month8": 0,
+        "day9": 0,
+        "month9": 0,
+        "day10": 0,
+        "month10": 0,
+        "day11": 0,
+        "month11": 0,
+        "day12": 0,
+        "month12": 0,
+        "d1": 0,
+        "w1": 0,
+        "d2": 0,
+        "w2": 0,
+        "d3": 0,
+        "w3": 0,
+        "d4": 0,
+        "w4": 0,
+        "d5": 0,
+        "w5": 0,
+        "d6": 0,
+        "w6": 0,
+        "xday1": 0,
+        "xmonth1": 0,
+        "xday2": 0,
+        "xmonth2": 0,
+        "xday3": 0,
+        "xmonth3": 0,
+        "xday4": 0,
+        "xmonth4": 0,
+        "xday5": 0,
+        "xmonth5": 0,
+        "xday6": 0,
+        "xmonth6": 0,
+        "xday7": 0,
+        "xmonth7": 0,
+        "xday8": 0,
+        "xmonth8": 0,
+        "xday9": 0,
+        "xmonth9": 0,
+        "xday10": 0,
+        "xmonth10": 0,
+        "xday11": 0,
+        "xmonth11": 0,
+        "xday12": 0,
+        "xmonth12": 0,
+        "xd1": 0,
+        "xw1": 0,
+        "xd2": 0,
+        "xw2": 0,
+        "xd3": 0,
+        "xw3": 0,
+        "xd4": 0,
+        "xw4": 0,
+        "xd5": 0,
+        "xw5": 0,
+        "xd6": 0,
+        "xw6": 0,
+        "suspend": false,
+        "random": false,
+        "randon1": false,
+        "randoff1": false,
+        "randon2": false,
+        "randoff2": false,
+        "repeat": false,
+        "atstart": false,
+        "odd": false,
+        "even": false,
+        "x": 110,
+        "y": 60,
+        "wires": [
+            [
+                "f8663fd1.36eb4"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f038a91d.994ed8",
+        "type": "inject",
+        "z": "69ca8618.c017c8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "close",
+        "payloadType": "str",
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "f8663fd1.36eb4"
+            ]
+        ]
+    },
+    {
+        "id": "15be70ad.3b6abf",
+        "type": "inject",
+        "z": "69ca8618.c017c8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "open",
+        "payloadType": "str",
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "f8663fd1.36eb4"
+            ]
+        ]
+    },
+    {
+        "id": "54fefc2.8d39704",
+        "type": "inject",
+        "z": "69ca8618.c017c8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "stop",
+        "payloadType": "str",
+        "x": 130,
+        "y": 280,
+        "wires": [
+            [
+                "f8663fd1.36eb4"
+            ]
+        ]
+    },
+    {
+        "id": "f8663fd1.36eb4",
+        "type": "mqtt out",
+        "z": "69ca8618.c017c8",
+        "name": "",
+        "topic": "shellies/shellyswitch25-E8DB84A20A74/roller/0/command",
+        "qos": "1",
+        "retain": "",
+        "broker": "cc498f3.4f5767",
+        "x": 460,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "8f417b12.d16278",
+        "type": "bigtimer",
+        "z": "37e240e2.5761d",
+        "outtopic": "",
+        "outpayload1": "100",
+        "outpayload2": "40",
+        "name": "Open/Close",
+        "comment": "",
+        "lat": "41.1579",
+        "lon": "-8.6291",
+        "starttime": "5000",
+        "endtime": "5001",
+        "starttime2": 0,
+        "endtime2": 0,
+        "startoff": 0,
+        "endoff": 0,
+        "startoff2": 0,
+        "endoff2": 0,
+        "offs": 0,
+        "outtext1": "",
+        "outtext2": "",
+        "timeout": 1440,
+        "sun": true,
+        "mon": true,
+        "tue": true,
+        "wed": true,
+        "thu": true,
+        "fri": true,
+        "sat": true,
+        "jan": true,
+        "feb": true,
+        "mar": true,
+        "apr": true,
+        "may": true,
+        "jun": true,
+        "jul": true,
+        "aug": true,
+        "sep": true,
+        "oct": true,
+        "nov": true,
+        "dec": true,
+        "day1": 0,
+        "month1": 0,
+        "day2": 0,
+        "month2": 0,
+        "day3": 0,
+        "month3": 0,
+        "day4": 0,
+        "month4": 0,
+        "day5": 0,
+        "month5": 0,
+        "day6": 0,
+        "month6": 0,
+        "day7": 0,
+        "month7": 0,
+        "day8": 0,
+        "month8": 0,
+        "day9": 0,
+        "month9": 0,
+        "day10": 0,
+        "month10": 0,
+        "day11": 0,
+        "month11": 0,
+        "day12": 0,
+        "month12": 0,
+        "d1": 0,
+        "w1": 0,
+        "d2": 0,
+        "w2": 0,
+        "d3": 0,
+        "w3": 0,
+        "d4": 0,
+        "w4": 0,
+        "d5": 0,
+        "w5": 0,
+        "d6": 0,
+        "w6": 0,
+        "xday1": 0,
+        "xmonth1": 0,
+        "xday2": 0,
+        "xmonth2": 0,
+        "xday3": 0,
+        "xmonth3": 0,
+        "xday4": 0,
+        "xmonth4": 0,
+        "xday5": 0,
+        "xmonth5": 0,
+        "xday6": 0,
+        "xmonth6": 0,
+        "xday7": 0,
+        "xmonth7": 0,
+        "xday8": 0,
+        "xmonth8": 0,
+        "xday9": 0,
+        "xmonth9": 0,
+        "xday10": 0,
+        "xmonth10": 0,
+        "xday11": 0,
+        "xmonth11": 0,
+        "xday12": 0,
+        "xmonth12": 0,
+        "xd1": 0,
+        "xw1": 0,
+        "xd2": 0,
+        "xw2": 0,
+        "xd3": 0,
+        "xw3": 0,
+        "xd4": 0,
+        "xw4": 0,
+        "xd5": 0,
+        "xw5": 0,
+        "xd6": 0,
+        "xw6": 0,
+        "suspend": false,
+        "random": false,
+        "randon1": false,
+        "randoff1": false,
+        "randon2": false,
+        "randoff2": false,
+        "repeat": false,
+        "atstart": false,
+        "odd": false,
+        "even": false,
+        "x": 110,
+        "y": 60,
+        "wires": [
+            [
+                "75a2fd01.956be4"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "75a2fd01.956be4",
+        "type": "mqtt out",
+        "z": "37e240e2.5761d",
+        "name": "",
+        "topic": "shellies/shellyswitch25-8CAAB561E825/roller/0/command/pos",
+        "qos": "1",
+        "retain": "",
+        "broker": "cc498f3.4f5767",
+        "x": 450,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2510cfea.2375b",
+        "type": "inject",
+        "z": "37e240e2.5761d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "close",
+        "payloadType": "str",
+        "x": 110,
+        "y": 160,
+        "wires": [
+            [
+                "e9fb5411.16d088"
+            ]
+        ]
+    },
+    {
+        "id": "20873e49.280f32",
+        "type": "inject",
+        "z": "37e240e2.5761d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "open",
+        "payloadType": "str",
+        "x": 110,
+        "y": 220,
+        "wires": [
+            [
+                "e9fb5411.16d088"
+            ]
+        ]
+    },
+    {
+        "id": "b6f7cfff.8090c",
+        "type": "inject",
+        "z": "37e240e2.5761d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "stop",
+        "payloadType": "str",
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "e9fb5411.16d088"
+            ]
+        ]
+    },
+    {
+        "id": "e9fb5411.16d088",
+        "type": "mqtt out",
+        "z": "37e240e2.5761d",
+        "name": "",
+        "topic": "shellies/shellyswitch25-8CAAB561E825/roller/0/command",
+        "qos": "1",
+        "retain": "",
+        "broker": "cc498f3.4f5767",
+        "x": 440,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "954dcc67.799a5",
+        "type": "bigtimer",
+        "z": "eaff0a8c.d1b918",
+        "outtopic": "",
+        "outpayload1": "",
+        "outpayload2": "close",
+        "name": "Close",
+        "comment": "",
+        "lat": "41.1579",
+        "lon": "-8.6291",
+        "starttime": "0",
+        "endtime": "5001",
+        "starttime2": 0,
+        "endtime2": 0,
+        "startoff": 0,
+        "endoff": "-2",
+        "startoff2": 0,
+        "endoff2": 0,
+        "offs": 0,
+        "outtext1": "",
+        "outtext2": "",
+        "timeout": 1440,
+        "sun": true,
+        "mon": true,
+        "tue": true,
+        "wed": true,
+        "thu": true,
+        "fri": true,
+        "sat": true,
+        "jan": true,
+        "feb": true,
+        "mar": true,
+        "apr": true,
+        "may": true,
+        "jun": true,
+        "jul": true,
+        "aug": true,
+        "sep": true,
+        "oct": true,
+        "nov": true,
+        "dec": true,
+        "day1": 0,
+        "month1": 0,
+        "day2": 0,
+        "month2": 0,
+        "day3": 0,
+        "month3": 0,
+        "day4": 0,
+        "month4": 0,
+        "day5": 0,
+        "month5": 0,
+        "day6": 0,
+        "month6": 0,
+        "day7": 0,
+        "month7": 0,
+        "day8": 0,
+        "month8": 0,
+        "day9": 0,
+        "month9": 0,
+        "day10": 0,
+        "month10": 0,
+        "day11": 0,
+        "month11": 0,
+        "day12": 0,
+        "month12": 0,
+        "d1": 0,
+        "w1": 0,
+        "d2": 0,
+        "w2": 0,
+        "d3": 0,
+        "w3": 0,
+        "d4": 0,
+        "w4": 0,
+        "d5": 0,
+        "w5": 0,
+        "d6": 0,
+        "w6": 0,
+        "xday1": 0,
+        "xmonth1": 0,
+        "xday2": 0,
+        "xmonth2": 0,
+        "xday3": 0,
+        "xmonth3": 0,
+        "xday4": 0,
+        "xmonth4": 0,
+        "xday5": 0,
+        "xmonth5": 0,
+        "xday6": 0,
+        "xmonth6": 0,
+        "xday7": 0,
+        "xmonth7": 0,
+        "xday8": 0,
+        "xmonth8": 0,
+        "xday9": 0,
+        "xmonth9": 0,
+        "xday10": 0,
+        "xmonth10": 0,
+        "xday11": 0,
+        "xmonth11": 0,
+        "xday12": 0,
+        "xmonth12": 0,
+        "xd1": 0,
+        "xw1": 0,
+        "xd2": 0,
+        "xw2": 0,
+        "xd3": 0,
+        "xw3": 0,
+        "xd4": 0,
+        "xw4": 0,
+        "xd5": 0,
+        "xw5": 0,
+        "xd6": 0,
+        "xw6": 0,
+        "suspend": false,
+        "random": false,
+        "randon1": false,
+        "randoff1": false,
+        "randon2": false,
+        "randoff2": false,
+        "repeat": false,
+        "atstart": false,
+        "odd": false,
+        "even": false,
+        "x": 190,
+        "y": 100,
+        "wires": [
+            [
+                "c1dc54e9.5cb188"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2d27423b.73eaae",
+        "type": "inject",
+        "z": "eaff0a8c.d1b918",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "close",
+        "payloadType": "str",
+        "x": 190,
+        "y": 360,
+        "wires": [
+            [
+                "c1dc54e9.5cb188"
+            ]
+        ]
+    },
+    {
+        "id": "550295ba.ea17cc",
+        "type": "inject",
+        "z": "eaff0a8c.d1b918",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "open",
+        "payloadType": "str",
+        "x": 190,
+        "y": 420,
+        "wires": [
+            [
+                "c1dc54e9.5cb188"
+            ]
+        ]
+    },
+    {
+        "id": "e051dd31.081b8",
+        "type": "inject",
+        "z": "eaff0a8c.d1b918",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "stop",
+        "payloadType": "str",
+        "x": 190,
+        "y": 480,
+        "wires": [
+            [
+                "c1dc54e9.5cb188"
+            ]
+        ]
+    },
+    {
+        "id": "c1dc54e9.5cb188",
+        "type": "mqtt out",
+        "z": "eaff0a8c.d1b918",
+        "name": "",
+        "topic": "shellies/shellyswitch25-E8DB84A2686A/roller/0/command",
+        "qos": "1",
+        "retain": "",
+        "broker": "cc498f3.4f5767",
+        "x": 560,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "4d1673af.00f0ac",
+        "type": "inject",
+        "z": "eaff0a8c.d1b918",
+        "name": "Open Weekend",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 10 * * 6,0",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "open",
+        "payloadType": "str",
+        "x": 160,
+        "y": 240,
+        "wires": [
+            [
+                "c1dc54e9.5cb188"
+            ]
+        ]
+    },
+    {
+        "id": "7859d514.e964fc",
+        "type": "inject",
+        "z": "eaff0a8c.d1b918",
+        "name": "Open Workday",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 09 * * 1,2,3,4,5",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "open",
+        "payloadType": "str",
+        "x": 160,
+        "y": 180,
+        "wires": [
+            [
+                "c1dc54e9.5cb188"
+            ]
+        ]
+    },
+    {
+        "id": "4b97541.d5df6ac",
+        "type": "mqtt out",
+        "z": "140810ca.ed9f1f",
+        "name": "",
+        "topic": "shellies/shellyswitch25-E8DB84A251F9/roller/0/command",
+        "qos": "1",
+        "retain": "",
+        "broker": "cc498f3.4f5767",
+        "x": 550,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "effcd942.33e4d8",
+        "type": "inject",
+        "z": "140810ca.ed9f1f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "close",
+        "payloadType": "str",
+        "x": 190,
+        "y": 420,
+        "wires": [
+            [
+                "4b97541.d5df6ac"
+            ]
+        ]
+    },
+    {
+        "id": "555c25f0.b8716c",
+        "type": "inject",
+        "z": "140810ca.ed9f1f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "open",
+        "payloadType": "str",
+        "x": 190,
+        "y": 480,
+        "wires": [
+            [
+                "4b97541.d5df6ac"
+            ]
+        ]
+    },
+    {
+        "id": "f1884e96.60567",
+        "type": "inject",
+        "z": "140810ca.ed9f1f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "stop",
+        "payloadType": "str",
+        "x": 190,
+        "y": 540,
+        "wires": [
+            [
+                "4b97541.d5df6ac"
+            ]
+        ]
+    },
+    {
+        "id": "c3c4abfd67a9b055",
+        "type": "bigtimer",
+        "z": "140810ca.ed9f1f",
+        "outtopic": "",
+        "outpayload1": "",
+        "outpayload2": "close",
+        "name": "Close",
+        "comment": "",
+        "lat": "41.1579",
+        "lon": "-8.6291",
+        "starttime": "0",
+        "endtime": "5001",
+        "starttime2": 0,
+        "endtime2": 0,
+        "startoff": "0",
+        "endoff": "1",
+        "startoff2": 0,
+        "endoff2": 0,
+        "offs": 0,
+        "outtext1": "",
+        "outtext2": "",
+        "timeout": 1440,
+        "sun": true,
+        "mon": true,
+        "tue": true,
+        "wed": true,
+        "thu": true,
+        "fri": true,
+        "sat": true,
+        "jan": true,
+        "feb": true,
+        "mar": true,
+        "apr": true,
+        "may": true,
+        "jun": true,
+        "jul": true,
+        "aug": true,
+        "sep": true,
+        "oct": true,
+        "nov": true,
+        "dec": true,
+        "day1": 0,
+        "month1": 0,
+        "day2": 0,
+        "month2": 0,
+        "day3": 0,
+        "month3": 0,
+        "day4": 0,
+        "month4": 0,
+        "day5": 0,
+        "month5": 0,
+        "day6": 0,
+        "month6": 0,
+        "day7": 0,
+        "month7": 0,
+        "day8": 0,
+        "month8": 0,
+        "day9": 0,
+        "month9": 0,
+        "day10": 0,
+        "month10": 0,
+        "day11": 0,
+        "month11": 0,
+        "day12": 0,
+        "month12": 0,
+        "d1": 0,
+        "w1": 0,
+        "d2": 0,
+        "w2": 0,
+        "d3": 0,
+        "w3": 0,
+        "d4": 0,
+        "w4": 0,
+        "d5": 0,
+        "w5": 0,
+        "d6": 0,
+        "w6": 0,
+        "xday1": 0,
+        "xmonth1": 0,
+        "xday2": 0,
+        "xmonth2": 0,
+        "xday3": 0,
+        "xmonth3": 0,
+        "xday4": 0,
+        "xmonth4": 0,
+        "xday5": 0,
+        "xmonth5": 0,
+        "xday6": 0,
+        "xmonth6": 0,
+        "xday7": 0,
+        "xmonth7": 0,
+        "xday8": 0,
+        "xmonth8": 0,
+        "xday9": 0,
+        "xmonth9": 0,
+        "xday10": 0,
+        "xmonth10": 0,
+        "xday11": 0,
+        "xmonth11": 0,
+        "xday12": 0,
+        "xmonth12": 0,
+        "xd1": 0,
+        "xw1": 0,
+        "xd2": 0,
+        "xw2": 0,
+        "xd3": 0,
+        "xw3": 0,
+        "xd4": 0,
+        "xw4": 0,
+        "xd5": 0,
+        "xw5": 0,
+        "xd6": 0,
+        "xw6": 0,
+        "suspend": false,
+        "random": false,
+        "randon1": false,
+        "randoff1": false,
+        "randon2": false,
+        "randoff2": false,
+        "repeat": false,
+        "atstart": false,
+        "odd": false,
+        "even": false,
+        "x": 190,
+        "y": 120,
+        "wires": [
+            [
+                "4b97541.d5df6ac"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2777171ce6227ce1",
+        "type": "inject",
+        "z": "140810ca.ed9f1f",
+        "name": "Open school 7:00",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 07 * * 1,3",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "open",
+        "payloadType": "str",
+        "x": 150,
+        "y": 240,
+        "wires": [
+            [
+                "4b97541.d5df6ac"
+            ]
+        ]
+    },
+    {
+        "id": "9e8dc8d5f0ec3bca",
+        "type": "inject",
+        "z": "140810ca.ed9f1f",
+        "name": "Open school 7:45",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "45 07 * * 2,5",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "open",
+        "payloadType": "str",
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "4b97541.d5df6ac"
+            ]
+        ]
+    },
+    {
+        "id": "4cfa9a26e0e3f4b7",
+        "type": "inject",
+        "z": "140810ca.ed9f1f",
+        "name": "Open school 08:30",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "30 08 * * 4",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "open",
+        "payloadType": "str",
+        "x": 140,
+        "y": 320,
+        "wires": [
+            [
+                "4b97541.d5df6ac"
+            ]
+        ]
+    },
+    {
+        "id": "9d499967147d7f96",
+        "type": "inject",
+        "z": "140810ca.ed9f1f",
+        "name": "Open weekend",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 10 * * 6,0",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "open",
+        "payloadType": "str",
+        "x": 160,
+        "y": 360,
+        "wires": [
+            [
+                "4b97541.d5df6ac"
+            ]
+        ]
+    },
+    {
+        "id": "4c01b002.e5d57",
+        "type": "bigtimer",
+        "z": "c5b1ec9d.6c958",
+        "outtopic": "",
+        "outpayload1": "open",
+        "outpayload2": "close",
+        "name": "Open/Close",
+        "comment": "",
+        "lat": "41.1579",
+        "lon": "-8.6291",
+        "starttime": "720",
+        "endtime": "5001",
+        "starttime2": 0,
+        "endtime2": 0,
+        "startoff": 0,
+        "endoff": "-4",
+        "startoff2": 0,
+        "endoff2": 0,
+        "offs": 0,
+        "outtext1": "",
+        "outtext2": "",
+        "timeout": 1440,
+        "sun": true,
+        "mon": true,
+        "tue": true,
+        "wed": true,
+        "thu": true,
+        "fri": true,
+        "sat": true,
+        "jan": true,
+        "feb": true,
+        "mar": true,
+        "apr": true,
+        "may": true,
+        "jun": true,
+        "jul": true,
+        "aug": true,
+        "sep": true,
+        "oct": true,
+        "nov": true,
+        "dec": true,
+        "day1": 0,
+        "month1": 0,
+        "day2": 0,
+        "month2": 0,
+        "day3": 0,
+        "month3": 0,
+        "day4": 0,
+        "month4": 0,
+        "day5": 0,
+        "month5": 0,
+        "day6": 0,
+        "month6": 0,
+        "day7": 0,
+        "month7": 0,
+        "day8": 0,
+        "month8": 0,
+        "day9": 0,
+        "month9": 0,
+        "day10": 0,
+        "month10": 0,
+        "day11": 0,
+        "month11": 0,
+        "day12": 0,
+        "month12": 0,
+        "d1": 0,
+        "w1": 0,
+        "d2": 0,
+        "w2": 0,
+        "d3": 0,
+        "w3": 0,
+        "d4": 0,
+        "w4": 0,
+        "d5": 0,
+        "w5": 0,
+        "d6": 0,
+        "w6": 0,
+        "xday1": 0,
+        "xmonth1": 0,
+        "xday2": 0,
+        "xmonth2": 0,
+        "xday3": 0,
+        "xmonth3": 0,
+        "xday4": 0,
+        "xmonth4": 0,
+        "xday5": 0,
+        "xmonth5": 0,
+        "xday6": 0,
+        "xmonth6": 0,
+        "xday7": 0,
+        "xmonth7": 0,
+        "xday8": 0,
+        "xmonth8": 0,
+        "xday9": 0,
+        "xmonth9": 0,
+        "xday10": 0,
+        "xmonth10": 0,
+        "xday11": 0,
+        "xmonth11": 0,
+        "xday12": 0,
+        "xmonth12": 0,
+        "xd1": 0,
+        "xw1": 0,
+        "xd2": 0,
+        "xw2": 0,
+        "xd3": 0,
+        "xw3": 0,
+        "xd4": 0,
+        "xw4": 0,
+        "xd5": 0,
+        "xw5": 0,
+        "xd6": 0,
+        "xw6": 0,
+        "suspend": false,
+        "random": false,
+        "randon1": false,
+        "randoff1": false,
+        "randon2": false,
+        "randoff2": false,
+        "repeat": false,
+        "atstart": false,
+        "odd": false,
+        "even": false,
+        "x": 90,
+        "y": 80,
+        "wires": [
+            [
+                "53554916.6bbaa8"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "78fa65c7.53224c",
+        "type": "inject",
+        "z": "c5b1ec9d.6c958",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "close",
+        "payloadType": "str",
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "53554916.6bbaa8"
+            ]
+        ]
+    },
+    {
+        "id": "2fb155c.36678aa",
+        "type": "inject",
+        "z": "c5b1ec9d.6c958",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "open",
+        "payloadType": "str",
+        "x": 110,
+        "y": 320,
+        "wires": [
+            [
+                "53554916.6bbaa8"
+            ]
+        ]
+    },
+    {
+        "id": "db71b743.0683f8",
+        "type": "inject",
+        "z": "c5b1ec9d.6c958",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "stop",
+        "payloadType": "str",
+        "x": 110,
+        "y": 380,
+        "wires": [
+            [
+                "53554916.6bbaa8"
+            ]
+        ]
+    },
+    {
+        "id": "53554916.6bbaa8",
+        "type": "mqtt out",
+        "z": "c5b1ec9d.6c958",
+        "name": "",
+        "topic": "shellies/shellyswitch25-E8DB84A1D60B/roller/0/command",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "cc498f3.4f5767",
+        "x": 480,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "b26a7f54d00f3621",
+        "type": "mqtt out",
+        "z": "8d42f729da146ee0",
+        "name": "",
+        "topic": "R/102c6b9cfab9/system/0/Serial",
+        "qos": "",
+        "retain": "",
+        "broker": "65f6ad10e3c3ffe6",
+        "x": 500,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "3a388d06085a69e6",
+        "type": "inject",
+        "z": "8d42f729da146ee0",
+        "name": "Repeat every 30 seconds",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 100,
+        "wires": [
+            [
+                "b26a7f54d00f3621"
+            ]
+        ]
+    },
+    {
+        "id": "c627a29b01488b70",
+        "type": "http request",
+        "z": "ca14a99745f37cb9",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.forecast.solar/789T6Cx58mn3uZ2y/estimate/watthours/day/41.081693/-8.643112/13/12/8.2",
+        "tls": "d8985576.3d6c78",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 290,
+        "y": 120,
+        "wires": [
+            [
+                "8fbe5c6015e28a5b",
+                "1635c739b6c14951"
+            ]
+        ]
+    },
+    {
+        "id": "8fbe5c6015e28a5b",
+        "type": "function",
+        "z": "ca14a99745f37cb9",
+        "name": "Create payload",
+        "func": "const today = new Date();\n\nconst indexes = Array.from({ length: 4 }, (_, i) => i);\n\nconst values = indexes.map((index) => {\n    const day = new Date();\n    day.setDate(today.getDate() + index);\n    return msg.payload.result[day.toISOString().substring(0, 10)] || 0;\n});\n\nconst msgs = values.map((value, index) => {\n    return {\n        \"payload\": {\n            \"op\": \"set\",\n            \"val\": value,\n            \"labels\": {\n                \"day\": index\n            }\n        }\n    }\n});\n\nglobal.set(\"solarForecast\", values);\nreturn [msgs];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 60,
+        "wires": [
+            [
+                "35d73a2a3ab80ffe"
+            ]
+        ]
+    },
+    {
+        "id": "1635c739b6c14951",
+        "type": "function",
+        "z": "ca14a99745f37cb9",
+        "name": "Create payload",
+        "func": "const tomorrow = new Date();\ntomorrow.setDate(tomorrow.getDate() + 1);\nconst tomorrowISO = tomorrow.toISOString().substring(0, 10);\n\nmsg.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload.result[tomorrowISO]\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4590006e9d367752",
+        "type": "http request",
+        "z": "ca14a99745f37cb9",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "query",
+        "url": "https://vrmapi.victronenergy.com/v2/installations/176724/stats?type=custom&attributeCodes[]=vrm_pv_charger_yield_fc&interval=days",
+        "tls": "d8985576.3d6c78",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "X-Authorization",
+                "valueType": "other",
+                "valueValue": "Token d3bdce69702cad35e4d9b349293378135d6d7546db88dcc8b910260760d576f8"
+            }
+        ],
+        "x": 470,
+        "y": 320,
+        "wires": [
+            [
+                "6d886a2dea7edd1a"
+            ]
+        ]
+    },
+    {
+        "id": "eaf7f47d9c7bd6ac",
+        "type": "inject",
+        "z": "ca14a99745f37cb9",
+        "d": true,
+        "name": "Every hour",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 400,
+        "wires": [
+            [
+                "fa34aa4110f34872",
+                "1187791c363b88d3"
+            ]
+        ]
+    },
+    {
+        "id": "1187791c363b88d3",
+        "type": "function",
+        "z": "ca14a99745f37cb9",
+        "name": "Create daily payload for PV Charger",
+        "func": "const midnightOfToday = new Date(new Date().setHours(0, 0, 0, 0)).valueOf();\nconst midnightOfDayAfterWeek = new Date(new Date().setHours(167, 0, 0, 0)).valueOf();\n\nmsg.payload = {\n    \"start\": Math.floor(midnightOfToday/1000), \n    \"end\": Math.floor(midnightOfDayAfterWeek/1000)\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 320,
+        "wires": [
+            [
+                "4590006e9d367752"
+            ]
+        ]
+    },
+    {
+        "id": "6d886a2dea7edd1a",
+        "type": "function",
+        "z": "ca14a99745f37cb9",
+        "name": "Create payload and set global",
+        "func": "// add 50% more to account for Inverter as that would require an additional HTTP call, not worth it\nconst values = msg.payload.records.vrm_pv_charger_yield_fc.map((value) => Math.floor(value[1] * 1.5));\n\nconst msgs = values.map((value, index) => {\n    return {\n        \"payload\": {\n            \"op\": \"set\",\n            \"val\": value,\n            \"labels\": {\n                \"day\": index\n            }\n        }\n    }\n});\n\nglobal.set(\"solarForecast\", values);\nreturn [msgs];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "35d73a2a3ab80ffe",
+        "type": "prometheus-exporter",
+        "z": "ca14a99745f37cb9",
+        "name": "",
+        "metric": "ad51451daaab657a",
+        "x": 740,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "fa34aa4110f34872",
+        "type": "function",
+        "z": "ca14a99745f37cb9",
+        "name": "Create hourly payload for PV Charger",
+        "func": "const now = new Date(new Date().setMinutes(0, 0, 0)).valueOf();\nconst in48Hours = now + 48*60*60*1000;\n\nmsg.payload = {\n    \"start\": Math.floor(now/1000), \n    \"end\": Math.floor(in48Hours/1000)\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 480,
+        "wires": [
+            [
+                "77aec1f2cf233e05"
+            ]
+        ]
+    },
+    {
+        "id": "77aec1f2cf233e05",
+        "type": "http request",
+        "z": "ca14a99745f37cb9",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "query",
+        "url": "https://vrmapi.victronenergy.com/v2/installations/176724/stats?type=custom&attributeCodes[]=vrm_pv_charger_yield_fc&interval=hours",
+        "tls": "d8985576.3d6c78",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "X-Authorization",
+                "valueType": "other",
+                "valueValue": "Token d3bdce69702cad35e4d9b349293378135d6d7546db88dcc8b910260760d576f8"
+            }
+        ],
+        "x": 470,
+        "y": 480,
+        "wires": [
+            [
+                "e20253a6b219599a"
+            ]
+        ]
+    },
+    {
+        "id": "e20253a6b219599a",
+        "type": "function",
+        "z": "ca14a99745f37cb9",
+        "name": "Create payload and set global",
+        "func": "// add 50% more to account for Inverter as that would require an additional HTTP call, not worth it\nconst values = msg.payload.records.vrm_pv_charger_yield_fc.map((value) => Math.floor(value[1] * 1.5));\n\nglobal.set(\"hourlySolarForecast\", values);\nreturn {payload: values};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cf40281b9581c3d2",
+        "type": "inject",
+        "z": "ca14a99745f37cb9",
+        "name": "Every hour",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "c627a29b01488b70"
+            ]
+        ]
+    },
+    {
+        "id": "55579f651dda8672",
+        "type": "inject",
+        "z": "75940931abc7f696",
+        "name": "Every hour",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "b7598a54b4a71ea4"
+            ]
+        ]
+    },
+    {
+        "id": "b7598a54b4a71ea4",
+        "type": "http request",
+        "z": "75940931abc7f696",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://www.omie.es/sites/default/files/dados/NUEVA_SECCION/INT_PBC_EV_H_ACUM.TXT",
+        "tls": "d8985576.3d6c78",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 310,
+        "y": 140,
+        "wires": [
+            [
+                "ddaaf59896db48bf"
+            ]
+        ]
+    },
+    {
+        "id": "ddaaf59896db48bf",
+        "type": "function",
+        "z": "75940931abc7f696",
+        "name": "Extract lines, set global and prepare metrics",
+        "func": "function parseDate(input) {\n    const parts = input.split('/');\n    try {\n        if (parts.length == 3) {\n            return new Date(parts[2], parts[1] - 1, parts[0]);\n        } \n    } catch (ex) {        \n    }\n    return undefined;\n}\n\nfunction parseLine(line) {\n    const parts = line.split(\";\");\n    if (parts.length < 4) return undefined;\n\n    const date = parseDate(parts[0]);    \n    if (!date) return undefined;\n\n    date.setHours(parts[1]-2);\n\n    return { date: date, price: parseFloat(parts[3].replace(',', '.')) };\n}\n\nfunction getStartOfToday() {\n    const now = new Date();\n    return new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0);\n}\n\nfunction getStartOfTomorrow() {\n    const result = getStartOfToday();\n    result.setDate(result.getDate()+1);\n    return result;\n}\n\nfunction buildPayload(value, day, hour) {\n    return {\n        \"payload\": {\n            \"op\": \"set\",\n            \"val\": value,\n            \"labels\": {\n                \"day\": day,\n                \"hour\": String(hour).padStart(2, \"0\")\n            }\n        }\n    }\n}\n\nconst entries = [];\nconst lines = msg.payload.split(\"\\n\");\n\nconst startOfToday = getStartOfToday();\nconst startOfTomorrow = getStartOfTomorrow();\n\nlet lineIndex = 0;\nwhile (lineIndex < lines.length) {\n    const parsedLine = parseLine(lines[lineIndex]);\n    if (parsedLine && parsedLine.date >= startOfToday) {\n        entries.push(parsedLine);\n    }\n    lineIndex++;\n}\n\nentries.sort(function (a, b) {\n    return a.date.getTime() - b.date.getTime();\n});\n\nentries.forEach(function(entry) {\n   let tarCents = 0;\n   if (entry.date.getHours() >= 22 || entry.date.getHours() < 8) {\n       tarCents = 1.57;\n   }  else {\n       tarCents = 8.6;\n   }\n   // ((OMIE + CGS + TSE + k) x (1+FP) + TAR) x IVA\n    entry.price = ((entry.price + 0.4 + 0.2893 + 1) * 1.16 + tarCents*10)*1.23;\n});\n\nglobal.set(\"omiePrice\", entries);\n\n// const hoursArray = Array.from({ length: 23 }, (_, index) => index).map((hour) => {\n//     return buildPayload(-1, \"tomorrow\", hour);\n// });\n\n// const msgs = entries.map((entry) => {\n//     return buildPayload(\n//         // in cents per kwh\n//         Math.round(entry.price / 10),\n//         (entry.date < startOfTomorrow) ? \"today\" : \"tomorrow\",\n//         entry.date.getHours()\n//     )\n// });\n\nconst msgs = [];\n\n[startOfToday, startOfTomorrow].forEach((day) => {\n    Array.from({ length: 24 }, (_, i) => i).forEach((hour) => {\n        const entryDate = new Date(day);\n        entryDate.setHours(hour);\n        const entry = entries.find((value) => value.date.getTime() == entryDate.getTime()) ||\n            {\n                price:0,\n                date: entryDate\n            };\n\n        msgs.push(\n            buildPayload(\n                // in cents per kwh\n                Math.round(entry.price / 10),\n                (entry.date < startOfTomorrow) ? \"today\" : \"tomorrow\",\n                entry.date.getHours()\n            )\n        );\n    });\n});\n\nreturn [msgs];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 140,
+        "wires": [
+            [
+                "6c4fc5dcc0662818",
+                "bbef8561dd32e76b"
+            ]
+        ]
+    },
+    {
+        "id": "bbef8561dd32e76b",
+        "type": "prometheus-exporter",
+        "z": "75940931abc7f696",
+        "name": "",
+        "metric": "d4f1c4823179a10f",
+        "x": 910,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "6c4fc5dcc0662818",
+        "type": "debug",
+        "z": "75940931abc7f696",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "b3554e5c.232b1",
+        "type": "mqtt out",
+        "z": "8adff1fe.af95b",
+        "name": "",
+        "topic": "W/102c6b9cfab9/settings/0/Settings/CGwacs/BatteryLife/MinimumSocLimit",
+        "qos": "1",
+        "retain": "",
+        "broker": "65f6ad10e3c3ffe6",
+        "x": 810,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "a6599583.e0a688",
+        "type": "inject",
+        "z": "8adff1fe.af95b",
+        "name": "Set SOC limit in morning",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 08 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"value\":5}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 60,
+        "wires": [
+            [
+                "b3554e5c.232b1"
+            ]
+        ]
+    },
+    {
+        "id": "7aa5cd04.3dae84",
+        "type": "mqtt out",
+        "z": "8adff1fe.af95b",
+        "name": "",
+        "topic": "W/102c6b9cfab9/settings/0/Settings/CGwacs/MaxChargePower",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "65f6ad10e3c3ffe6",
+        "x": 640,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "5fadc3.76bb423c",
+        "type": "inject",
+        "z": "8adff1fe.af95b",
+        "name": "Set Battery Charge Power early evening",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 22 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"value\":500}",
+        "payloadType": "json",
+        "x": 200,
+        "y": 200,
+        "wires": [
+            [
+                "7aa5cd04.3dae84"
+            ]
+        ]
+    },
+    {
+        "id": "4504f79b.1c0918",
+        "type": "inject",
+        "z": "8adff1fe.af95b",
+        "name": "Set Battery Charge Power late evening",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 03 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"value\":2000}",
+        "payloadType": "json",
+        "x": 200,
+        "y": 260,
+        "wires": [
+            [
+                "7aa5cd04.3dae84"
+            ]
+        ]
+    },
+    {
+        "id": "e3de81ea.85d85",
+        "type": "inject",
+        "z": "8adff1fe.af95b",
+        "name": "Set SOC limit in evening",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "01 22 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "f065cf72.104cc"
+            ]
+        ]
+    },
+    {
+        "id": "4046073d.39fb78",
+        "type": "mqtt in",
+        "z": "8adff1fe.af95b",
+        "name": "Read battery SOC",
+        "topic": "N/102c6b9cfab9/system/0/Batteries",
+        "qos": "1",
+        "datatype": "json",
+        "broker": "65f6ad10e3c3ffe6",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 130,
+        "y": 440,
+        "wires": [
+            [
+                "2978eb29be998d1d"
+            ]
+        ]
+    },
+    {
+        "id": "f065cf72.104cc",
+        "type": "function",
+        "z": "8adff1fe.af95b",
+        "name": "",
+        "func": "const chargeEfficiency = 0.95;\nconst minDaylightConsumptionKwh = 2;\nconst maxDaylightConsumptionKwh = 15;\n// in summer use 8, winter do 30\nconst minSOCPercent = 30;\nconst maxSOCPercent = 85;\nconst batteryCapacityKwh = 40;\n\nconst tomorrowChargeKwh = (global.get(\"solarForecast\")[1] || 1) * chargeEfficiency / 1000;\n\nconst rangeMax = maxSOCPercent - 100 * (tomorrowChargeKwh - minDaylightConsumptionKwh) / batteryCapacityKwh;\nconst rangeMin = minSOCPercent - 100 * (tomorrowChargeKwh - maxDaylightConsumptionKwh) / batteryCapacityKwh;\n\nconst eveningSocMargin = 2 * ((24 + 8 - (new Date().getHours())) % 24);  \nconst currentSOC = (flow.get(\"SOC\") || 10);\n\nconst targetSOC = Math.max(Math.min(Math.max(currentSOC - eveningSocMargin, rangeMin), rangeMax, maxSOCPercent), minSOCPercent);\n\nconsole.log(targetSOC);\n\nmsg.payload = {\n     value: targetSOC,\n     tomorrowChargeKwh,\n     rangeMax,\n     rangeMin,\n     currentSOC\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 120,
+        "wires": [
+            [
+                "b3554e5c.232b1",
+                "9cef43fc57f495ed"
+            ]
+        ]
+    },
+    {
+        "id": "d5804f7acd5165e1",
+        "type": "inject",
+        "z": "8adff1fe.af95b",
+        "name": "Set Battery Charge Power early morning",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 08 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"value\":2000}",
+        "payloadType": "json",
+        "x": 200,
+        "y": 320,
+        "wires": [
+            [
+                "7aa5cd04.3dae84"
+            ]
+        ]
+    },
+    {
+        "id": "2978eb29be998d1d",
+        "type": "change",
+        "z": "8adff1fe.af95b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "SOC",
+                "pt": "flow",
+                "to": "payload.value[0].soc",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9cef43fc57f495ed",
+        "type": "debug",
+        "z": "8adff1fe.af95b",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "f253df1726caa321",
+        "type": "mqtt in",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "topic": "N/102c6b9cfab9/battery/512/Dc/0/Current",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "inputs": 0,
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+                "3abf83936cd11b7c"
+            ]
+        ]
+    },
+    {
+        "id": "3abf83936cd11b7c",
+        "type": "function",
+        "z": "f6d96fc8cb663d40",
+        "name": "Create payload",
+        "func": "msg.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload.value\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 160,
+        "wires": [
+            [
+                "779d69384b395b0b"
+            ]
+        ]
+    },
+    {
+        "id": "8c3601789aa3fbb8",
+        "type": "mqtt in",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "topic": "N/102c6b9cfab9/battery/512/Dc/0/Power",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "inputs": 0,
+        "x": 180,
+        "y": 220,
+        "wires": [
+            [
+                "4f582c3bc8a7e834"
+            ]
+        ]
+    },
+    {
+        "id": "4f582c3bc8a7e834",
+        "type": "function",
+        "z": "f6d96fc8cb663d40",
+        "name": "Create payload",
+        "func": "msg.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload.value\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 220,
+        "wires": [
+            [
+                "b7d03f407f8ff8be"
+            ]
+        ]
+    },
+    {
+        "id": "932c30290ac632f5",
+        "type": "mqtt in",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "topic": "N/102c6b9cfab9/battery/512/Dc/0/Voltage",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "inputs": 0,
+        "x": 180,
+        "y": 280,
+        "wires": [
+            [
+                "abc1f14bf2530348"
+            ]
+        ]
+    },
+    {
+        "id": "abc1f14bf2530348",
+        "type": "function",
+        "z": "f6d96fc8cb663d40",
+        "name": "Create payload",
+        "func": "msg.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload.value\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 280,
+        "wires": [
+            [
+                "5e74297663a113c3"
+            ]
+        ]
+    },
+    {
+        "id": "c0ffb67644f6140b",
+        "type": "mqtt in",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "topic": "N/102c6b9cfab9/battery/512/Dc/0/Temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "inputs": 0,
+        "x": 200,
+        "y": 340,
+        "wires": [
+            [
+                "61565f0576b62b9a"
+            ]
+        ]
+    },
+    {
+        "id": "61565f0576b62b9a",
+        "type": "function",
+        "z": "f6d96fc8cb663d40",
+        "name": "Create payload",
+        "func": "msg.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload.value\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 340,
+        "wires": [
+            [
+                "bc64a34d6dce3f79"
+            ]
+        ]
+    },
+    {
+        "id": "ff872d603ca6f685",
+        "type": "mqtt in",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "topic": "N/102c6b9cfab9/battery/512/Soc",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "inputs": 0,
+        "x": 160,
+        "y": 400,
+        "wires": [
+            [
+                "fab77e5de34c2fdb"
+            ]
+        ]
+    },
+    {
+        "id": "fab77e5de34c2fdb",
+        "type": "function",
+        "z": "f6d96fc8cb663d40",
+        "name": "Create payload",
+        "func": "msg.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload.value\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 400,
+        "wires": [
+            [
+                "a45a6c2afa6ba93f"
+            ]
+        ]
+    },
+    {
+        "id": "659a5736631550ba",
+        "type": "mqtt in",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "topic": "N/102c6b9cfab9/system/0/Ac/Grid/L1/Power",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "inputs": 0,
+        "x": 190,
+        "y": 460,
+        "wires": [
+            [
+                "4715797e9928563b"
+            ]
+        ]
+    },
+    {
+        "id": "4715797e9928563b",
+        "type": "function",
+        "z": "f6d96fc8cb663d40",
+        "name": "Create payload",
+        "func": "msg.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload.value\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 460,
+        "wires": [
+            [
+                "3e66632edd927b68"
+            ]
+        ]
+    },
+    {
+        "id": "20525e0d5c0b1ed0",
+        "type": "mqtt in",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "topic": "N/102c6b9cfab9/system/0/Ac/Consumption/L1/Power",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "inputs": 0,
+        "x": 220,
+        "y": 520,
+        "wires": [
+            [
+                "6123624ea2d40f22"
+            ]
+        ]
+    },
+    {
+        "id": "6123624ea2d40f22",
+        "type": "function",
+        "z": "f6d96fc8cb663d40",
+        "name": "Create payload",
+        "func": "msg.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload.value\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 520,
+        "wires": [
+            [
+                "ca652fe0010a42c6"
+            ]
+        ]
+    },
+    {
+        "id": "779d69384b395b0b",
+        "type": "prometheus-exporter",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "metric": "4d588ab370788d43",
+        "x": 760,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "b7d03f407f8ff8be",
+        "type": "prometheus-exporter",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "metric": "1f7d1d77798cd21d",
+        "x": 760,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "5e74297663a113c3",
+        "type": "prometheus-exporter",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "metric": "bd6fd22336fd2e38",
+        "x": 760,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "bc64a34d6dce3f79",
+        "type": "prometheus-exporter",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "metric": "494e2406dd828843",
+        "x": 780,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a45a6c2afa6ba93f",
+        "type": "prometheus-exporter",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "metric": "ea2e21dd9fca10bc",
+        "x": 750,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "3e66632edd927b68",
+        "type": "prometheus-exporter",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "metric": "206c923c584b2cc9",
+        "x": 750,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ca652fe0010a42c6",
+        "type": "prometheus-exporter",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "metric": "624e4d04727f66f5",
+        "x": 780,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "64f5777c92c01565",
+        "type": "mqtt in",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "topic": "N/102c6b9cfab9/settings/0/Settings/CGwacs/BatteryLife/MinimumSocLimit",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 580,
+        "wires": [
+            [
+                "707aa50ee34bdc68"
+            ]
+        ]
+    },
+    {
+        "id": "707aa50ee34bdc68",
+        "type": "function",
+        "z": "f6d96fc8cb663d40",
+        "name": "Create payload",
+        "func": "msg.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload.value\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 580,
+        "wires": [
+            [
+                "24e707a9429f6df1"
+            ]
+        ]
+    },
+    {
+        "id": "24e707a9429f6df1",
+        "type": "prometheus-exporter",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "metric": "d52562f6991dbcc5",
+        "x": 920,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "bc97190a940d53dc",
+        "type": "prometheus-exporter",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "metric": "b6136bbb0824bed0",
+        "x": 770,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "8562530818fec085",
+        "type": "function",
+        "z": "f6d96fc8cb663d40",
+        "name": "Create payload",
+        "func": "msg.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload.value\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 640,
+        "wires": [
+            [
+                "bc97190a940d53dc"
+            ]
+        ]
+    },
+    {
+        "id": "7e2bd5d87ff36ef0",
+        "type": "mqtt in",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "topic": "N/102c6b9cfab9/system/0/Ac/PvOnGrid/L1/Power",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 210,
+        "y": 640,
+        "wires": [
+            [
+                "8562530818fec085"
+            ]
+        ]
+    },
+    {
+        "id": "5a4562dc54ecaf4c",
+        "type": "prometheus-exporter",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "metric": "f8fc697f3d1fe4b1",
+        "x": 770,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "fc9df9bd22f9b808",
+        "type": "function",
+        "z": "f6d96fc8cb663d40",
+        "name": "Create payload",
+        "func": "msg.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload.value\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 700,
+        "wires": [
+            [
+                "5a4562dc54ecaf4c"
+            ]
+        ]
+    },
+    {
+        "id": "3965dcb714344dc8",
+        "type": "mqtt in",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "topic": "N/102c6b9cfab9/system/0/Dc/Pv/Power",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 180,
+        "y": 700,
+        "wires": [
+            [
+                "fc9df9bd22f9b808"
+            ]
+        ]
+    },
+    {
+        "id": "a832f8761671ee03",
+        "type": "prometheus-exporter",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "metric": "5a6cce6768ed1944",
+        "x": 790,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "d2e80fb7a56ace92",
+        "type": "function",
+        "z": "f6d96fc8cb663d40",
+        "name": "Create payload",
+        "func": "msg.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload.value\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 100,
+        "wires": [
+            [
+                "6713a7a4d34da50d"
+            ]
+        ]
+    },
+    {
+        "id": "5402c87a64081be0",
+        "type": "mqtt in",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "topic": "N/102c6b9cfab9/battery/512/System/MinCellVoltage",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 220,
+        "y": 100,
+        "wires": [
+            [
+                "d2e80fb7a56ace92"
+            ]
+        ]
+    },
+    {
+        "id": "6713a7a4d34da50d",
+        "type": "prometheus-exporter",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "metric": "7c47e5285c425ff3",
+        "x": 790,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e95167c2353afff0",
+        "type": "function",
+        "z": "f6d96fc8cb663d40",
+        "name": "Create payload",
+        "func": "msg.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload.value\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 40,
+        "wires": [
+            [
+                "a832f8761671ee03"
+            ]
+        ]
+    },
+    {
+        "id": "3593f99b041a45c4",
+        "type": "mqtt in",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "topic": "N/102c6b9cfab9/battery/512/System/MaxCellVoltage",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 220,
+        "y": 40,
+        "wires": [
+            [
+                "e95167c2353afff0"
+            ]
+        ]
+    },
+    {
+        "id": "3a435484c12c2d98",
+        "type": "mqtt in",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "topic": "N/102c6b9cfab9/evcharger/40/Ac/Power",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 760,
+        "wires": [
+            [
+                "c5a563c7cdd46e5d"
+            ]
+        ]
+    },
+    {
+        "id": "c5a563c7cdd46e5d",
+        "type": "function",
+        "z": "f6d96fc8cb663d40",
+        "name": "Create payload",
+        "func": "msg.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload.value\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 760,
+        "wires": [
+            [
+                "c8b22dee1b9d31b1"
+            ]
+        ]
+    },
+    {
+        "id": "c8b22dee1b9d31b1",
+        "type": "prometheus-exporter",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "metric": "0a2972b563cb7ab4",
+        "x": 770,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "9cc8b1559807a35c",
+        "type": "prometheus-exporter",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "metric": "9b1812a9c25bd733",
+        "x": 780,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "5a4f3f6c0101b547",
+        "type": "function",
+        "z": "f6d96fc8cb663d40",
+        "name": "Create payload",
+        "func": "msg.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload.value\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 820,
+        "wires": [
+            [
+                "9cc8b1559807a35c"
+            ]
+        ]
+    },
+    {
+        "id": "f4bb6b1e8f736a42",
+        "type": "mqtt in",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "topic": "N/102c6b9cfab9/evcharger/41/Ac/Power",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 820,
+        "wires": [
+            [
+                "5a4f3f6c0101b547"
+            ]
+        ]
+    },
+    {
+        "id": "89c315fd3548c657",
+        "type": "prometheus-exporter",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "metric": "b06a760a37f82250",
+        "x": 770,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "5c42380d3834ab19",
+        "type": "function",
+        "z": "f6d96fc8cb663d40",
+        "name": "Create payload",
+        "func": "msg.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload.value\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 880,
+        "wires": [
+            [
+                "89c315fd3548c657"
+            ]
+        ]
+    },
+    {
+        "id": "7ec826090ae00e8b",
+        "type": "mqtt in",
+        "z": "f6d96fc8cb663d40",
+        "name": "",
+        "topic": "N/102c6b9cfab9/temperature/24/Temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 880,
+        "wires": [
+            [
+                "5c42380d3834ab19"
+            ]
+        ]
+    },
+    {
+        "id": "af7ff01584a124da",
+        "type": "mqtt in",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Read battery SOC",
+        "topic": "N/102c6b9cfab9/system/0/Batteries",
+        "qos": "1",
+        "datatype": "json",
+        "broker": "65f6ad10e3c3ffe6",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "e49abf8ad95d8d98"
+            ]
+        ]
+    },
+    {
+        "id": "e49abf8ad95d8d98",
+        "type": "change",
+        "z": "eb5b7fcb6e88a670",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "SOC",
+                "pt": "flow",
+                "to": "payload.value[0].soc",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "11fa11b6d1c79b44",
+        "type": "mqtt in",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Read battery power",
+        "topic": "N/102c6b9cfab9/battery/512/Dc/0/Power",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "1da840b3207ba4a6"
+            ]
+        ]
+    },
+    {
+        "id": "1da840b3207ba4a6",
+        "type": "change",
+        "z": "eb5b7fcb6e88a670",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "batteryPower",
+                "pt": "flow",
+                "to": "payload.value",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "47f9c2b7993dcee0",
+        "type": "mqtt in",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Read SOC Min",
+        "topic": "N/102c6b9cfab9/settings/0/Settings/CGwacs/BatteryLife/MinimumSocLimit",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 280,
+        "wires": [
+            [
+                "9964c3450fcd983f"
+            ]
+        ]
+    },
+    {
+        "id": "9964c3450fcd983f",
+        "type": "change",
+        "z": "eb5b7fcb6e88a670",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "minSOC",
+                "pt": "flow",
+                "to": "payload.value",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1adbd009d82122a3",
+        "type": "inject",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Off (1)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 90,
+        "y": 560,
+        "wires": [
+            [
+                "1962c2f9778bfceb"
+            ]
+        ]
+    },
+    {
+        "id": "1962c2f9778bfceb",
+        "type": "change",
+        "z": "eb5b7fcb6e88a670",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "i3Mode",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 660,
+        "wires": [
+            [
+                "808fa66077452bb0"
+            ]
+        ]
+    },
+    {
+        "id": "4f6e259226068b51",
+        "type": "inject",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Night (4)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "4",
+        "payloadType": "num",
+        "x": 100,
+        "y": 680,
+        "wires": [
+            [
+                "1962c2f9778bfceb"
+            ]
+        ]
+    },
+    {
+        "id": "cb97039de09de870",
+        "type": "inject",
+        "z": "eb5b7fcb6e88a670",
+        "name": "On (5)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5",
+        "payloadType": "num",
+        "x": 90,
+        "y": 720,
+        "wires": [
+            [
+                "1962c2f9778bfceb"
+            ]
+        ]
+    },
+    {
+        "id": "f283b228bb7f54ad",
+        "type": "inject",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Manual (6)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "6",
+        "payloadType": "num",
+        "x": 100,
+        "y": 760,
+        "wires": [
+            [
+                "1962c2f9778bfceb"
+            ]
+        ]
+    },
+    {
+        "id": "c9fd13f4a045fefb",
+        "type": "change",
+        "z": "eb5b7fcb6e88a670",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "konaMode",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 1000,
+        "wires": [
+            [
+                "cc6ecebcbf01bd40"
+            ]
+        ]
+    },
+    {
+        "id": "4cdce26d28d5143f",
+        "type": "prometheus-exporter",
+        "z": "eb5b7fcb6e88a670",
+        "name": "",
+        "metric": "3bed233a6e5cc969",
+        "x": 780,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "808fa66077452bb0",
+        "type": "function",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Create payload",
+        "func": "msg.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 660,
+        "wires": [
+            [
+                "4cdce26d28d5143f"
+            ]
+        ]
+    },
+    {
+        "id": "cc6ecebcbf01bd40",
+        "type": "function",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Create payload",
+        "func": "msg.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 1000,
+        "wires": [
+            [
+                "421fcbab79bb979a"
+            ]
+        ]
+    },
+    {
+        "id": "421fcbab79bb979a",
+        "type": "prometheus-exporter",
+        "z": "eb5b7fcb6e88a670",
+        "name": "",
+        "metric": "cdc76e63bec6b72e",
+        "x": 790,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "d05a5084a5ebe441",
+        "type": "inject",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Sun only (2)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2",
+        "payloadType": "num",
+        "x": 110,
+        "y": 600,
+        "wires": [
+            [
+                "1962c2f9778bfceb"
+            ]
+        ]
+    },
+    {
+        "id": "4c8807a2f62afd61",
+        "type": "inject",
+        "z": "eb5b7fcb6e88a670",
+        "name": "ESS only (3)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "3",
+        "payloadType": "num",
+        "x": 110,
+        "y": 640,
+        "wires": [
+            [
+                "1962c2f9778bfceb"
+            ]
+        ]
+    },
+    {
+        "id": "7dfdb20cb964ddd3",
+        "type": "inject",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Off (1)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 90,
+        "y": 900,
+        "wires": [
+            [
+                "c9fd13f4a045fefb"
+            ]
+        ]
+    },
+    {
+        "id": "2e26d1165955e4ae",
+        "type": "inject",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Night (4)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "4",
+        "payloadType": "num",
+        "x": 100,
+        "y": 1020,
+        "wires": [
+            [
+                "c9fd13f4a045fefb"
+            ]
+        ]
+    },
+    {
+        "id": "76bd45020934e033",
+        "type": "inject",
+        "z": "eb5b7fcb6e88a670",
+        "name": "On (5)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5",
+        "payloadType": "num",
+        "x": 90,
+        "y": 1060,
+        "wires": [
+            [
+                "c9fd13f4a045fefb"
+            ]
+        ]
+    },
+    {
+        "id": "259629d7f401bdd4",
+        "type": "inject",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Manual (6)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "6",
+        "payloadType": "num",
+        "x": 100,
+        "y": 1100,
+        "wires": [
+            [
+                "c9fd13f4a045fefb"
+            ]
+        ]
+    },
+    {
+        "id": "5f7c9a409b6a5a5e",
+        "type": "inject",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Sun only (2)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2",
+        "payloadType": "num",
+        "x": 110,
+        "y": 940,
+        "wires": [
+            [
+                "c9fd13f4a045fefb"
+            ]
+        ]
+    },
+    {
+        "id": "62315740e15ad60b",
+        "type": "inject",
+        "z": "eb5b7fcb6e88a670",
+        "name": "ESS only (3)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "3",
+        "payloadType": "num",
+        "x": 110,
+        "y": 980,
+        "wires": [
+            [
+                "c9fd13f4a045fefb"
+            ]
+        ]
+    },
+    {
+        "id": "e4fe8699a05acd85",
+        "type": "mqtt in",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Interruptor hall",
+        "topic": "shellyplusi4-083af2013a04/events/rpc",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "cc498f3.4f5767",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 820,
+        "wires": [
+            [
+                "2bb71e8b20fcbc3e"
+            ]
+        ]
+    },
+    {
+        "id": "2bb71e8b20fcbc3e",
+        "type": "function",
+        "z": "eb5b7fcb6e88a670",
+        "name": "prep payload",
+        "func": "const id = msg.payload.params.events[0].id;\n\nlet pushes;\nif (msg.payload.params.events[0].event == 'single_push') {\n    pushes = 1;\n} else if (msg.payload.params.events[0].event == 'double_push') {\n    pushes = 2;\n} else if (msg.payload.params.events[0].event == 'triple_push') {\n    pushes = 3;\n} else {\n    return;\n}\n\nconst map = new Map([\n    [\"0_1\", 3], [\"0_2\", 2], [\"0_3\", 1],\n    [\"1_1\", 4], [\"1_2\", 5], [\"1_3\", 6],\n    [\"2_1\", 4], [\"2_2\", 5], [\"2_3\", 6],\n    [\"3_1\", 3], [\"3_2\", 2], [\"3_3\", 1]]\n    );\nconst mode = map.get(id + \"_\" + pushes);\n\nlet target;\nif (mode != undefined) {\n    if (id == 0 || id == 1) {\n        target = \"i3\";\n    } else {\n        target = \"kona\";\n    }\n    return {\n        payload: mode,\n        target\n    }\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 820,
+        "wires": [
+            [
+                "2c228ddac87f95fd"
+            ]
+        ]
+    },
+    {
+        "id": "2c228ddac87f95fd",
+        "type": "switch",
+        "z": "eb5b7fcb6e88a670",
+        "name": "",
+        "property": "target",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "i3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "kona",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 450,
+        "y": 820,
+        "wires": [
+            [
+                "1962c2f9778bfceb"
+            ],
+            [
+                "c9fd13f4a045fefb"
+            ]
+        ]
+    },
+    {
+        "id": "a212a1fdbc1a5f4e",
+        "type": "mqtt in",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Read i3 charge power",
+        "topic": "N/102c6b9cfab9/evcharger/40/Ac/Power",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 20,
+        "wires": [
+            [
+                "08c4e4dd5c57289e"
+            ]
+        ]
+    },
+    {
+        "id": "08c4e4dd5c57289e",
+        "type": "change",
+        "z": "eb5b7fcb6e88a670",
+        "name": "set flow.i3Power",
+        "rules": [
+            {
+                "t": "set",
+                "p": "i3Power",
+                "pt": "flow",
+                "to": "payload.value",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fc10f77c9ccdc526",
+        "type": "mqtt in",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Read i3 plug state",
+        "topic": "N/102c6b9cfab9/evcharger/40/Status",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 80,
+        "wires": [
+            [
+                "6c9e9327494eabb7"
+            ]
+        ]
+    },
+    {
+        "id": "6c9e9327494eabb7",
+        "type": "change",
+        "z": "eb5b7fcb6e88a670",
+        "name": "set flow i3Status",
+        "rules": [
+            {
+                "t": "set",
+                "p": "i3Status",
+                "pt": "flow",
+                "to": "payload.value",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e8281061c452efc8",
+        "type": "mqtt in",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Read Kona charge power",
+        "topic": "N/102c6b9cfab9/evcharger/41/Ac/Power",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 650,
+        "y": 20,
+        "wires": [
+            [
+                "3a89ca65c5600f20"
+            ]
+        ]
+    },
+    {
+        "id": "3a89ca65c5600f20",
+        "type": "change",
+        "z": "eb5b7fcb6e88a670",
+        "name": "set flow.i3Power",
+        "rules": [
+            {
+                "t": "set",
+                "p": "konaPower",
+                "pt": "flow",
+                "to": "payload.value",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d4982fc770af795f",
+        "type": "mqtt in",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Read Kona plug state",
+        "topic": "N/102c6b9cfab9/evcharger/41/Status",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 640,
+        "y": 80,
+        "wires": [
+            [
+                "2e470cc12e4a25ce"
+            ]
+        ]
+    },
+    {
+        "id": "2e470cc12e4a25ce",
+        "type": "change",
+        "z": "eb5b7fcb6e88a670",
+        "name": "set flow i3Status",
+        "rules": [
+            {
+                "t": "set",
+                "p": "konaStatus",
+                "pt": "flow",
+                "to": "payload.value",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "19ed8b1882c70b7b",
+        "type": "mqtt out",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Set i3 current",
+        "topic": "W/102c6b9cfab9/evcharger/40/SetCurrent",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "65f6ad10e3c3ffe6",
+        "x": 1030,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a3cee64f472f7597",
+        "type": "mqtt out",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Set i3 start/stop",
+        "topic": "W/102c6b9cfab9/evcharger/40/StartStop",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "65f6ad10e3c3ffe6",
+        "x": 1040,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "c1bca0e8a878d787",
+        "type": "mqtt out",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Set Kona current",
+        "topic": "W/102c6b9cfab9/evcharger/41/SetCurrent",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "65f6ad10e3c3ffe6",
+        "x": 1050,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "45eb964e0d35933b",
+        "type": "mqtt out",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Set Kona start/stop",
+        "topic": "W/102c6b9cfab9/evcharger/41/StartStop",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "65f6ad10e3c3ffe6",
+        "x": 1050,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "eea933bdb9241345",
+        "type": "inject",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Every 15 secs",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "15",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 420,
+        "wires": [
+            [
+                "3d72c3f5d41f4a5c"
+            ]
+        ]
+    },
+    {
+        "id": "3d72c3f5d41f4a5c",
+        "type": "function",
+        "z": "eb5b7fcb6e88a670",
+        "name": "which",
+        "func": "const periodSecs = 15;\nif (Math.floor(Date.now() / (periodSecs * 1000)) % 2 == 1) {\n    return [null, {}]\n} else {\n    return [{}, null]\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 420,
+        "wires": [
+            [
+                "408a4d30b0ef2dc9"
+            ],
+            [
+                "4e908d64ed8252b1"
+            ]
+        ]
+    },
+    {
+        "id": "deb101e1f3270a6c",
+        "type": "subflow:7f1c5dd455b5d4d9",
+        "z": "eb5b7fcb6e88a670",
+        "name": "",
+        "x": 790,
+        "y": 360,
+        "wires": [
+            [
+                "19ed8b1882c70b7b"
+            ],
+            [
+                "a3cee64f472f7597"
+            ]
+        ]
+    },
+    {
+        "id": "408a4d30b0ef2dc9",
+        "type": "function",
+        "z": "eb5b7fcb6e88a670",
+        "name": "read i3 props",
+        "func": "return {\n    payload: {\n        mode: global.get(\"i3Mode\"),\n        chargingPower: flow.get(\"i3Power\"),\n        chargerStatus: flow.get(\"i3Status\"),\n        soc: flow.get(\"SOC\"),\n        minSoc: flow.get(\"minSOC\"),\n        batteryPower: flow.get(\"batteryPower\"),\n        maxAmps: 18,\n    }\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 360,
+        "wires": [
+            [
+                "deb101e1f3270a6c"
+            ]
+        ]
+    },
+    {
+        "id": "4e908d64ed8252b1",
+        "type": "function",
+        "z": "eb5b7fcb6e88a670",
+        "name": "read kona props",
+        "func": "return {\n    payload: {\n        mode: global.get(\"konaMode\"),\n        chargingPower: flow.get(\"konaPower\"),\n        chargerStatus: flow.get(\"konaStatus\"),\n        soc: flow.get(\"SOC\"),\n        minSoc: flow.get(\"minSOC\"),\n        batteryPower: flow.get(\"batteryPower\"),\n        maxAmps: 24,\n    }\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 480,
+        "wires": [
+            [
+                "28f255bdc546bf77"
+            ]
+        ]
+    },
+    {
+        "id": "28f255bdc546bf77",
+        "type": "subflow:7f1c5dd455b5d4d9",
+        "z": "eb5b7fcb6e88a670",
+        "name": "",
+        "x": 790,
+        "y": 480,
+        "wires": [
+            [
+                "c1bca0e8a878d787"
+            ],
+            [
+                "45eb964e0d35933b"
+            ]
+        ]
+    },
+    {
+        "id": "02a6aa12f8c6fc5c",
+        "type": "inject",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Trigger i3",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 360,
+        "wires": [
+            [
+                "408a4d30b0ef2dc9"
+            ]
+        ]
+    },
+    {
+        "id": "a0bb130257ac12ba",
+        "type": "inject",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Trigger Kona",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 480,
+        "wires": [
+            [
+                "4e908d64ed8252b1"
+            ]
+        ]
+    },
+    {
+        "id": "03d2f58b926ec879",
+        "type": "mqtt in",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Read i3 Current",
+        "topic": "N/102c6b9cfab9/evcharger/40/SetCurrent",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 340,
+        "y": 560,
+        "wires": [
+            [
+                "c73b84c3c0afa192"
+            ]
+        ]
+    },
+    {
+        "id": "c73b84c3c0afa192",
+        "type": "function",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Fallback to manual",
+        "func": "if (msg.payload.value == 6) {\n    return {payload: 6}\n} else {\n    return null;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 560,
+        "wires": [
+            [
+                "1962c2f9778bfceb"
+            ]
+        ]
+    },
+    {
+        "id": "db117318254b09f0",
+        "type": "function",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Fallback to manual",
+        "func": "if (msg.payload.value == 6) {\n    return {payload: 6}\n} else {\n    return null;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 1100,
+        "wires": [
+            [
+                "c9fd13f4a045fefb"
+            ]
+        ]
+    },
+    {
+        "id": "4d00616285d03f2d",
+        "type": "mqtt in",
+        "z": "eb5b7fcb6e88a670",
+        "name": "Read Kona Current",
+        "topic": "N/102c6b9cfab9/evcharger/41/SetCurrent",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "65f6ad10e3c3ffe6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 330,
+        "y": 1100,
+        "wires": [
+            [
+                "db117318254b09f0"
+            ]
+        ]
+    },
+    {
+        "id": "9b354662.f3ebe8",
+        "type": "function",
+        "z": "e4d087d6.b3e7c8",
+        "name": "Check week day",
+        "func": "let dt = new Date();\ndt.setDate(dt.getDate() + 30);\nlet isProperWeekday = [1,3,4].includes(dt.getDay())\nif (isProperWeekday) {\n    return {bookDate: \n        `000${dt.getFullYear()}`.substr(-4) + \n        \"-\" +\n        `0${dt.getMonth()+1}`.substr(-2) +\n        \"-\" +\n        `0${dt.getDate()}`.substr(-2) \n    };\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 430,
+        "y": 160,
+        "wires": [
+            [
+                "a295791a.3a2b68"
+            ]
+        ]
+    },
+    {
+        "id": "b0d21f6d.1e031",
+        "type": "debug",
+        "z": "e4d087d6.b3e7c8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "579da2b9.7fa95c",
+        "type": "http request",
+        "z": "e4d087d6.b3e7c8",
+        "name": "Login",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.aircourts.pt/site/do_login",
+        "tls": "d8985576.3d6c78",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 630,
+        "y": 240,
+        "wires": [
+            [
+                "a4261337.dc731"
+            ]
+        ]
+    },
+    {
+        "id": "a295791a.3a2b68",
+        "type": "function",
+        "z": "e4d087d6.b3e7c8",
+        "name": "Add login data",
+        "func": "msg.headers = {};\nmsg.headers[\"Content-Type\"] = \"application/x-www-form-urlencoded\";\nmsg.payload =  {\n  \"redirect\": \"\",\n  \"email\": \"carlosb007@gmail.com\",\n  \"password\": \"cameloide\",\n  \"next\": \"None\"\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 440,
+        "y": 240,
+        "wires": [
+            [
+                "579da2b9.7fa95c"
+            ]
+        ]
+    },
+    {
+        "id": "a4261337.dc731",
+        "type": "function",
+        "z": "e4d087d6.b3e7c8",
+        "name": "Set cookie",
+        "func": "msg.headers = {Cookie: \"session=\" + msg.responseCookies.session.value};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 810,
+        "y": 240,
+        "wires": [
+            [
+                "d9a8e0b4.12b31"
+            ]
+        ]
+    },
+    {
+        "id": "3273f48c.b93fcc",
+        "type": "http request",
+        "z": "e4d087d6.b3e7c8",
+        "name": "Book",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.aircourts.pt/index.php/api/create_booking",
+        "tls": "d8985576.3d6c78",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 690,
+        "y": 340,
+        "wires": [
+            [
+                "b0d21f6d.1e031"
+            ]
+        ]
+    },
+    {
+        "id": "d9a8e0b4.12b31",
+        "type": "function",
+        "z": "e4d087d6.b3e7c8",
+        "name": "Add Champion data",
+        "func": "msg.headers[\"Content-Type\"] = \"application/x-www-form-urlencoded\";\nmsg.payload =  {\n    \"court\": \"1557\",\n    \"day\": msg.bookDate,\n    \"start_time\": \"18:30\",\n    \"end_time\": \"20:00\",\n    \"options\": \"\",\n    \"booking_type\": \"3\",\n    \"description\": \" \",\n    \"rating\": \"0\",\n    \"phone\": \"351960074000\",\n    \"customer\": \"Carlos Barbosa\",\n    \"extras\": \"0\",\n    \"total_price\": \"20.00\",\n    \"tier\": \"0\",\n    \"status\": \"2\",\n    \"paid_online\": \"0\",\n    \"trigger_email\": \"created\",\n    \"sport\": \"4\"\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 460,
+        "y": 340,
+        "wires": [
+            [
+                "3273f48c.b93fcc"
+            ]
+        ]
+    },
+    {
+        "id": "45538ed3.88eb1",
+        "type": "inject",
+        "z": "e4d087d6.b3e7c8",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "01 00 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 100,
+        "y": 80,
+        "wires": [
+            [
+                "ed7b1c0b.f7522"
+            ]
+        ]
+    },
+    {
+        "id": "4c0b9ebb.3e88f",
+        "type": "function",
+        "z": "e4d087d6.b3e7c8",
+        "name": "Check day",
+        "func": "let dt = new Date();\ndt.setDate(dt.getDate() + 15);\nlet dtStr = `000${dt.getFullYear()}`.substr(-4) + \n        \"-\" +\n        `0${dt.getMonth()+1}`.substr(-2) +\n        \"-\" +\n        `0${dt.getDate()}`.substr(-2) \nlet isProperDay = (dtStr == '2021-05-17') || (dtStr == '2021-05-24');\nif (isProperDay) {\n    return {bookDate: dtStr};\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 430,
+        "y": 460,
+        "wires": [
+            [
+                "9bfc385f.13d068"
+            ]
+        ]
+    },
+    {
+        "id": "2689258d.c0b47a",
+        "type": "debug",
+        "z": "e4d087d6.b3e7c8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "9222a1f1.ae3c7",
+        "type": "http request",
+        "z": "e4d087d6.b3e7c8",
+        "name": "Login",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.aircourts.pt/site/do_login",
+        "tls": "d8985576.3d6c78",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 650,
+        "y": 540,
+        "wires": [
+            [
+                "1a0d4a28.8da136"
+            ]
+        ]
+    },
+    {
+        "id": "9bfc385f.13d068",
+        "type": "function",
+        "z": "e4d087d6.b3e7c8",
+        "name": "Add login data",
+        "func": "msg.headers = {};\nmsg.headers[\"Content-Type\"] = \"application/x-www-form-urlencoded\";\nmsg.payload =  {\n  \"redirect\": \"\",\n  \"email\": \"carlosb007@gmail.com\",\n  \"password\": \"cameloide\",\n  \"next\": \"None\"\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 460,
+        "y": 540,
+        "wires": [
+            [
+                "9222a1f1.ae3c7"
+            ]
+        ]
+    },
+    {
+        "id": "1a0d4a28.8da136",
+        "type": "function",
+        "z": "e4d087d6.b3e7c8",
+        "name": "Set cookie",
+        "func": "msg.headers = {Cookie: \"session=\" + msg.responseCookies.session.value};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 830,
+        "y": 540,
+        "wires": [
+            [
+                "a65ef370.03964"
+            ]
+        ]
+    },
+    {
+        "id": "b874b15.e16bd5",
+        "type": "http request",
+        "z": "e4d087d6.b3e7c8",
+        "name": "Book",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.aircourts.pt/index.php/api/create_booking",
+        "tls": "d8985576.3d6c78",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 690,
+        "y": 640,
+        "wires": [
+            [
+                "2689258d.c0b47a"
+            ]
+        ]
+    },
+    {
+        "id": "a65ef370.03964",
+        "type": "function",
+        "z": "e4d087d6.b3e7c8",
+        "name": "Add Total Padel data",
+        "func": "msg.headers[\"Content-Type\"] = \"application/x-www-form-urlencoded\";\nmsg.payload =  {\n    \"court\": \"908\",\n    \"day\": msg.bookDate,\n    \"start_time\": \"18:30\",\n    \"end_time\": \"20:00\",\n    \"options\": \"\",\n    \"booking_type\": \"3\",\n    \"description\": \" \",\n    \"rating\": \"0\",\n    \"phone\": \"351960074000\",\n    \"customer\": \"Carlos Barbosa\",\n    \"extras\": \"0\",\n    \"total_price\": \"30.00\",\n    \"tier\": \"0\",\n    \"status\": \"2\",\n    \"paid_online\": \"0\",\n    \"trigger_email\": \"created\",\n    \"sport\": \"4\"\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 640,
+        "wires": [
+            [
+                "b874b15.e16bd5"
+            ]
+        ]
+    },
+    {
+        "id": "ed7b1c0b.f7522",
+        "type": "delay",
+        "z": "e4d087d6.b3e7c8",
+        "name": "Rnd delay 0..10m",
+        "pauseType": "random",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "0",
+        "randomLast": "600",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 150,
+        "y": 320,
+        "wires": [
+            [
+                "9b354662.f3ebe8",
+                "4c0b9ebb.3e88f"
+            ]
+        ]
+    },
+    {
+        "id": "8946ea18.b7c3c8",
+        "type": "function",
+        "z": "8eb17c2f.ee95d",
+        "name": "Decide if start/stop and create payload",
+        "func": "const shouldRun = msg.payload[0].acpower >= 400;\nconst apiKey = \"55940dda-c726-4be7-a087-aedd40a1d9c9\";\nconst organizationId = \"68781c59-d4e9-485a-9da0-171e7b50862f\"\nconst timestamp = Date.now().toString();\nconst nonce = createNonce();\nconst requestId = createNonce();\nconst body = {\n  \"rigId\": \"0-e0d4VgYRekOpFjSsgLdt-A\",\n  \"action\": (shouldRun ? \"START\" : \"STOP\")\n};\nconst method = \"POST\";\nconst path = \"/main/api/v2/mining/rigs/status2\";\nconst queryString = \"\";\n\nmsg.headers = {\n    \"X-Request-Id\": requestId,\n\t\"X-User-Agent\": \"NHNodeClient\",\n\t\"X-Time\": timestamp,\n\t\"X-Nonce\": nonce,\n\t\"X-Organization-Id\": organizationId,\n};\nmsg.payload = getHmacInput(timestamp, nonce, body);\nmsg.body = body;\nmsg.apiKey = apiKey;\nmsg.shouldRun = shouldRun;\n\nreturn msg;\n\n\nfunction createNonce() {\n\tvar s = '', length = 32;\n\tdo {\n\t\ts += Math.random().toString(36).substr(2);\n\t} while (s.length < length);\n\ts = s.substr(0, length);\n\treturn s;\n}\n\nfunction getHmacInput(time, nonce, body) {\n  return apiKey + \"\\0\" + \n    time + \"\\0\" + \n    nonce + \"\\0\" + \n    \"\\0\" + \n    organizationId + \"\\0\" + \n    \"\\0\" + \n    method + \"\\0\" + \n    path + \"\\0\" + \n    queryString\n    + \n    (body ? \"\\0\" + JSON.stringify(body) : \"\");\n};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 690,
+        "y": 240,
+        "wires": [
+            [
+                "2c63843b.860b3c",
+                "f5d6a311.7dd18",
+                "df5dd7bf.fbf4e8"
+            ]
+        ]
+    },
+    {
+        "id": "8df475f.cd3bb88",
+        "type": "inject",
+        "z": "8eb17c2f.ee95d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 240,
+        "wires": [
+            [
+                "8946ea18.b7c3c8"
+            ]
+        ]
+    },
+    {
+        "id": "54dbafab.2fa89",
+        "type": "debug",
+        "z": "8eb17c2f.ee95d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1690,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "65e10474.65a41c",
+        "type": "http request",
+        "z": "8eb17c2f.ee95d",
+        "name": "POST to NiceHash",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api2.nicehash.com/main/api/v2/mining/rigs/status2",
+        "tls": "d8985576.3d6c78",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1470,
+        "y": 60,
+        "wires": [
+            [
+                "54dbafab.2fa89"
+            ]
+        ]
+    },
+    {
+        "id": "d651413f.d17a3",
+        "type": "function",
+        "z": "8eb17c2f.ee95d",
+        "name": "Set hashed value into X-Auth",
+        "func": "msg.headers[\"X-Auth\"] = msg.apiKey + \":\" + msg.payload;\nmsg.payload = msg.body;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1180,
+        "y": 60,
+        "wires": [
+            [
+                "65e10474.65a41c",
+                "54dbafab.2fa89"
+            ]
+        ]
+    },
+    {
+        "id": "f5d6a311.7dd18",
+        "type": "switch",
+        "z": "8eb17c2f.ee95d",
+        "name": "If should run",
+        "property": "shouldRun",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1070,
+        "y": 240,
+        "wires": [
+            [
+                "ab3e08a2.6e2308",
+                "fe1a0676.b36c58"
+            ]
+        ]
+    },
+    {
+        "id": "fe1a0676.b36c58",
+        "type": "function",
+        "z": "8eb17c2f.ee95d",
+        "name": "Don't sleep cmd",
+        "func": "return {payload: \"powercfg -requestsoverride PROCESS excavator.exe\"};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1300,
+        "y": 320,
+        "wires": [
+            [
+                "e8abf007.300f6"
+            ]
+        ]
+    },
+    {
+        "id": "df5dd7bf.fbf4e8",
+        "type": "switch",
+        "z": "8eb17c2f.ee95d",
+        "name": "If should stop",
+        "property": "shouldRun",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1080,
+        "y": 400,
+        "wires": [
+            [
+                "b154a47a.97b088"
+            ]
+        ]
+    },
+    {
+        "id": "b154a47a.97b088",
+        "type": "function",
+        "z": "8eb17c2f.ee95d",
+        "name": "Can sleep cmd",
+        "func": "\nreturn {payload:\"powercfg -requestsoverride PROCESS excavator.exe awaymode display system\"};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1300,
+        "y": 400,
+        "wires": [
+            [
+                "e8abf007.300f6"
+            ]
+        ]
+    },
+    {
+        "id": "2c63843b.860b3c",
+        "type": "hmac",
+        "z": "8eb17c2f.ee95d",
+        "name": "",
+        "algorithm": "HmacSHA256",
+        "key": "fa814ebe-4f6b-4bce-a000-4707831d0abc4d6e0179-3524-422c-99d3-859d7fdb357e",
+        "x": 950,
+        "y": 60,
+        "wires": [
+            [
+                "d651413f.d17a3"
+            ]
+        ]
+    },
+    {
+        "id": "ab3e08a2.6e2308",
+        "type": "wake on lan",
+        "z": "8eb17c2f.ee95d",
+        "mac": "40-8D-5C-58-93-04",
+        "host": "",
+        "udpport": 9,
+        "name": "",
+        "x": 1340,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "e8abf007.300f6",
+        "type": "interactive-ssh",
+        "z": "8eb17c2f.ee95d",
+        "name": "",
+        "host": "thermal.local",
+        "port": 22,
+        "username": "carlos",
+        "pass": "passw0rdmaistramada",
+        "keepOpen": false,
+        "x": 1520,
+        "y": 360,
+        "wires": [
+            [
+                "54dbafab.2fa89"
+            ]
+        ]
+    }
+]

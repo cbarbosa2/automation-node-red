@@ -2,7 +2,14 @@
     "name": "home-automation",
     "description": "A Node-RED Project",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-bigtimer": "2.8.6",
+        "node-red-contrib-crypto-js": "0.1.1",
+        "node-red-contrib-interactive-ssh": "0.1.1",
+        "node-red-contrib-prometheus-exporter": "1.0.5",
+        "node-red-node-wol": "0.2.0",
+        "victron-vrm-api": "0.2.10"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",

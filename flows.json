@@ -144,35 +144,6 @@
         "color": "#DDAA99"
     },
     {
-        "id": "cc498f3.4f5767",
-        "type": "mqtt-broker",
-        "name": "Local Mosquitto MQTT",
-        "broker": "localhost",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "compatmode": false,
-        "protocolVersion": 4,
-        "keepalive": "60",
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
         "id": "d8985576.3d6c78",
         "type": "tls-config",
         "name": "Fake SSL Cert",
@@ -670,7 +641,12 @@
         "topic": "shellies/shellyswitch25-E8DB84AA450A/roller/0/command",
         "qos": "1",
         "retain": "",
-        "broker": "cc498f3.4f5767",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "65f6ad10e3c3ffe6",
         "x": 460,
         "y": 240,
         "wires": []
@@ -900,7 +876,12 @@
         "topic": "shellies/shellyswitch25-E8DB84A20A74/roller/0/command",
         "qos": "1",
         "retain": "",
-        "broker": "cc498f3.4f5767",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "65f6ad10e3c3ffe6",
         "x": 460,
         "y": 220,
         "wires": []
@@ -1047,7 +1028,12 @@
         "topic": "shellies/shellyswitch25-8CAAB561E825/roller/0/command/pos",
         "qos": "1",
         "retain": "",
-        "broker": "cc498f3.4f5767",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "65f6ad10e3c3ffe6",
         "x": 450,
         "y": 60,
         "wires": []
@@ -1143,7 +1129,12 @@
         "topic": "shellies/shellyswitch25-8CAAB561E825/roller/0/command",
         "qos": "1",
         "retain": "",
-        "broker": "cc498f3.4f5767",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "65f6ad10e3c3ffe6",
         "x": 440,
         "y": 220,
         "wires": []
@@ -1373,7 +1364,12 @@
         "topic": "shellies/shellyswitch25-E8DB84A2686A/roller/0/command",
         "qos": "1",
         "retain": "",
-        "broker": "cc498f3.4f5767",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "65f6ad10e3c3ffe6",
         "x": 560,
         "y": 280,
         "wires": []
@@ -1444,7 +1440,12 @@
         "topic": "shellies/shellyswitch25-E8DB84A251F9/roller/0/command",
         "qos": "1",
         "retain": "",
-        "broker": "cc498f3.4f5767",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "65f6ad10e3c3ffe6",
         "x": 550,
         "y": 380,
         "wires": []
@@ -2012,7 +2013,7 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "cc498f3.4f5767",
+        "broker": "65f6ad10e3c3ffe6",
         "x": 480,
         "y": 260,
         "wires": []
@@ -2099,7 +2100,8 @@
         "y": 80,
         "wires": [
             [
-                "35d73a2a3ab80ffe"
+                "35d73a2a3ab80ffe",
+                "f27ed46104143250"
             ]
         ]
     },
@@ -2346,6 +2348,22 @@
                 "c627a29b01488b70"
             ]
         ]
+    },
+    {
+        "id": "f27ed46104143250",
+        "type": "debug",
+        "z": "ca14a99745f37cb9",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 140,
+        "wires": []
     },
     {
         "id": "55579f651dda8672",
@@ -4032,7 +4050,7 @@
         "topic": "shellyplusi4-083af2013a04/events/rpc",
         "qos": "2",
         "datatype": "auto-detect",
-        "broker": "cc498f3.4f5767",
+        "broker": "65f6ad10e3c3ffe6",
         "nl": false,
         "rap": true,
         "rh": 0,
